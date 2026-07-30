@@ -15,3 +15,7 @@ Companion repository for the Medium tutorial **Build an Interactive Audio Percep
 4. Open the Gradio link emitted by `demo.launch(share=True)` only for non-sensitive demonstration audio.
 
 This is an editable research MVP, not a production deployment architecture.
+
+## License and disclaimer
+
+This repository is released under the [MIT License](LICENSE). Read the full [Disclaimer](DISCLAIMER.md) before use. It is a personal, unsupported technical reference implementation provided as-is, without warranty, support or liability to the fullest extent permitted by law. The views expressed are personal and do not represent the author's employer or Oracle. Users remain responsible for their audio and transcription data, consent and data-rights obligations, security, costs, third-party terms and compliance obligations.
