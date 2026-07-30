@@ -110,6 +110,7 @@ For an operational design, separate the user interface, audio storage, repeatabl
 - [Notebook Sessions](https://docs.oracle.com/iaas/Content/data-science/using/use-notebook-sessions.htm)
 - [OCI Data Science Jobs](https://docs.oracle.com/en-us/iaas/Content/GSG/Reference/getting-started-as-data-scientist.htm)
 - [OCI Data Science Model Deployments](https://docs.oracle.com/en-us/iaas/Content/data-science/using/ai-quick-actions-model-deploy.htm)
+- [Gradio Quickstart guides](https://gradio.app/guides/quickstart)
 - [Companion repository disclaimer](../DISCLAIMER.md)
 
 ## Disclaimer
