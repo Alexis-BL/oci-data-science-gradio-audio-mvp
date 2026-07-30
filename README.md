@@ -14,6 +14,8 @@ Gradio's sharing link is useful for a non-sensitive demo; a production architect
 
 Companion repository for the Medium tutorial **Build an Interactive Audio Perception MVP with Gradio and OCI Data Science**.
 
+The Medium-ready article source is available in [`articles/medium-article.md`](articles/medium-article.md).
+
 ## Contents
 
 - `notebooks/word-level-audio-perception-gradio-oci.ipynb` — tutorial notebook (to be added from the source file)
