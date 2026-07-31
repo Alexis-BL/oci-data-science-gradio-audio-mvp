@@ -73,6 +73,14 @@ The editable table contains the transcribed word, default target frequency of `1
 
 Edit the target frequency, filter bandwidth, or timestamps when appropriate, then select **Validate table changes**. These values are experimental controls; the default target frequency is not an automatic per-word frequency measurement.
 
+![Desktop view of the Gradio administrator interface](../assets/gradio-desktop-audio-frequency.png)
+
+*Figure 1 — Desktop view of the Administrator tab after word-level frequency and bandwidth settings have been entered. The interface displays the editable transcription table, the original and concatenated fundamental-frequency contours, and the generated audio player.*
+
+![Mobile view of the Gradio audio-generation interface](../assets/gradio-mobile-audio-generation.jpg)
+
+*Figure 2 — Mobile view of the same responsive Gradio workflow. The administrator can validate the table, compare the original and concatenated frequency contours, generate the processed audio, and send it to the end user.*
+
 ## Step 6 — Generate the audio sequence
 
 Select **Generate concatenated audio**. For each word, the notebook extracts the segment, estimates fundamental frequency using `librosa.yin`, shifts its pitch toward the selected target using `librosa.effects.pitch_shift`, and applies a fourth-order Butterworth band-pass filter. The core sequence is:
