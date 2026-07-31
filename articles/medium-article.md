@@ -94,6 +94,10 @@ out.append(seg_colored)
 
 The processed segments are concatenated with `np.concatenate(out)`. The application displays the result and its estimated fundamental-frequency contour.
 
+![Mobile view of the generated concatenated audio](../assets/gradio-mobile-generated-audio.jpg)
+
+*Figure 3 — Mobile view after generating the concatenated audio. The interface shows the original and processed fundamental-frequency contours, the generated-audio player, and the action used to send the resulting sequence to the end user.*
+
 ## Step 7 — Send the test to an end user
 
 Select **Send to user** and open the **End User** tab. The user listens to the generated audio, enters the phrase heard, and selects **Verify**. The MVP normalizes text and compares words with the administrator reference. This is a simple experimental check, not a sequence-aware accuracy metric or a scientific validation instrument.
