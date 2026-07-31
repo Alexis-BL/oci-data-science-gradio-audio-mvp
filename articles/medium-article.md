@@ -102,6 +102,14 @@ The processed segments are concatenated with `np.concatenate(out)`. The applicat
 
 Select **Send to user** and open the **End User** tab. The user listens to the generated audio, enters the phrase heard, and selects **Verify**. The MVP normalizes text and compares words with the administrator reference. This is a simple experimental check, not a sequence-aware accuracy metric or a scientific validation instrument.
 
+![Desktop view of the end-user listening and verification flow](../assets/gradio-desktop-user-result.png)
+
+*Figure 4 — Desktop view of the End User tab. The user listens to the generated audio, enters the perceived sentence, runs the verification, and sees the resulting score alongside the administrator reference.*
+
+![Mobile view of the end-user listening and verification flow](../assets/gradio-mobile-user-result.png)
+
+*Figure 5 — Mobile view of the same End User workflow, showing the audio player, response field, verification action, score, and reference panel on a phone-sized display.*
+
 ## Step 8 — Share responsibly
 
 The notebook calls:
