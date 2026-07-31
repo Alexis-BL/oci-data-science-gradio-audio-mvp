@@ -77,9 +77,9 @@ Edit the target frequency, filter bandwidth, or timestamps when appropriate, the
 
 *Figure 1 — Desktop view of the Administrator tab after word-level frequency and bandwidth settings have been entered. The interface displays the editable transcription table, the original and concatenated fundamental-frequency contours, and the generated audio player.*
 
-![Mobile view of the Gradio audio-generation interface](../assets/gradio-mobile-audio-generation.jpg)
+![Mobile view of the Gradio recording and word-level settings interface](../assets/gradio-mobile-recording.png)
 
-*Figure 2 — Mobile view of the same responsive Gradio workflow. The administrator can validate the table, compare the original and concatenated frequency contours, generate the processed audio, and send it to the end user.*
+*Figure 2 — Mobile view of the responsive Administrator tab after recording a sentence. The recording player, editable word-level frequency and bandwidth table, validation action, and original fundamental-frequency contour remain available on a phone-sized display.*
 
 ## Step 6 — Generate the audio sequence
 
