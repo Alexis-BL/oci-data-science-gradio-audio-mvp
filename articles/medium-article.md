@@ -6,6 +6,10 @@ Turning an audio-research hypothesis into a testable experience should not requi
 
 OCI Data Science provides the managed JupyterLab workspace, selectable Compute, persistent storage, and simple start/stop lifecycle for the experiment. The scope is deliberately limited to a demonstrator. It is not a validated scientific protocol, clinical tool, hearing assessment, or production application.
 
+![Overview of the Gradio Administrator interface](../assets/gradio-what-you-will-build.png)
+
+*Figure 1 — What you will build: the Gradio Administrator interface brings together recording or upload, word-level settings, frequency plots, audio generation, and handoff to the end-user workflow in one responsive page.*
+
 > **Publication note:** the companion repository is currently private. Make it public, or replace the repository link with an appropriate public link, before publishing this article on Medium.
 
 ## What you will build
@@ -75,11 +79,11 @@ Edit the target frequency, filter bandwidth, or timestamps when appropriate, the
 
 ![Desktop view of the Gradio administrator interface](../assets/gradio-desktop-audio-frequency.png)
 
-*Figure 1 — Desktop view of the Administrator tab after word-level frequency and bandwidth settings have been entered. The interface displays the editable transcription table, the original and concatenated fundamental-frequency contours, and the generated audio player.*
+*Figure 2 — Desktop view of the Administrator tab after word-level frequency and bandwidth settings have been entered. The interface displays the editable transcription table, the original and concatenated fundamental-frequency contours, and the generated audio player.*
 
 ![Mobile view of the Gradio recording and word-level settings interface](../assets/gradio-mobile-recording.png)
 
-*Figure 2 — Mobile view of the responsive Administrator tab after recording a sentence. The recording player, editable word-level frequency and bandwidth table, validation action, and original fundamental-frequency contour remain available on a phone-sized display.*
+*Figure 3 — Mobile view of the responsive Administrator tab after recording a sentence. The recording player, editable word-level frequency and bandwidth table, validation action, and original fundamental-frequency contour remain available on a phone-sized display.*
 
 ## Step 6 — Generate the audio sequence
 
@@ -96,7 +100,7 @@ The processed segments are concatenated with `np.concatenate(out)`. The applicat
 
 ![Mobile view of the generated concatenated audio](../assets/gradio-mobile-generated-audio.jpg)
 
-*Figure 3 — Mobile view after generating the concatenated audio. The interface shows the original and processed fundamental-frequency contours, the generated-audio player, and the action used to send the resulting sequence to the end user.*
+*Figure 4 — Mobile view after generating the concatenated audio. The interface shows the original and processed fundamental-frequency contours, the generated-audio player, and the action used to send the resulting sequence to the end user.*
 
 ## Step 7 — Send the test to an end user
 
@@ -104,11 +108,11 @@ Select **Send to user** and open the **End User** tab. The user listens to the g
 
 ![Desktop view of the end-user listening and verification flow](../assets/gradio-desktop-user-result.png)
 
-*Figure 4 — Desktop view of the End User tab. The user listens to the generated audio, enters the perceived sentence, runs the verification, and sees the resulting score alongside the administrator reference.*
+*Figure 5 — Desktop view of the End User tab. The user listens to the generated audio, enters the perceived sentence, runs the verification, and sees the resulting score alongside the administrator reference.*
 
 ![Mobile view of the end-user listening and verification flow](../assets/gradio-mobile-user-result.png)
 
-*Figure 5 — Mobile view of the same End User workflow, showing the audio player, response field, verification action, score, and reference panel on a phone-sized display.*
+*Figure 6 — Mobile view of the same End User workflow, showing the audio player, response field, verification action, score, and reference panel on a phone-sized display.*
 
 ## Step 8 — Share responsibly
 
