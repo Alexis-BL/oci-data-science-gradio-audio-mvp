@@ -62,6 +62,8 @@ The notebook then downloads and installs FFmpeg, followed by:
 !ffmpeg -version
 ```
 
+> **FFmpeg environment note —** FFmpeg installation can vary depending on the OCI Data Science image, Conda environment, operating-system architecture, and available shared libraries. This MVP retains the static installation method that worked in the environment in which it was originally developed and tested. Treat it as a tested reference rather than a universal installation procedure. Before continuing, verify that `ffmpeg -version` runs successfully. If it does not, install a build compatible with your selected Notebook Session environment and architecture. Troubleshooting every possible FFmpeg configuration is outside the scope of this MVP tutorial.
+
 Whisper's `small` model is loaded when the application cell runs. First use can download model files and may take time depending on the selected shape and network.
 
 ## Step 4 — Transcribe a sentence
