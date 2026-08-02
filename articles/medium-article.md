@@ -2,20 +2,25 @@
 
 ## From a recorded sentence to word-level audio transformation and user feedback
 
-Turning an audio-research hypothesis into a testable experience should not require building a full product first. This MVP combines Gradio, Whisper, Librosa, and SciPy in an OCI Data Science Notebook Session: an administrator records or uploads a sentence, obtains word-level timing, adjusts audio parameters, generates a transformed sequence, and sends it to an end user for a listening test.
+This tutorial originated from a real-world MVP discussion: a prospective customer wanted to explore whether a simple, interactive audio workflow could be built quickly around word-level frequency transformation and listening feedback.
 
-OCI Data Science provides the managed JupyterLab workspace, selectable Compute, persistent storage, and simple start/stop lifecycle for the experiment. The scope is deliberately limited to a demonstrator. It is not a validated scientific protocol, clinical tool, hearing assessment, or production application.
+The objective was not to create a production application or validate a scientific protocol. It was to make an idea testable: record or upload a spoken sentence, split it into words, associate each word with adjustable frequency settings, generate a transformed sequence, and ask a listener to enter what they heard.
+
+The result is a transparent Gradio prototype that makes each step visible and editable, and combines Whisper, Librosa, and SciPy within an OCI Data Science Notebook Session; OCI Data Science provides the managed notebook environment in which the workflow can be assembled, tested, stopped, and extended without first building and operating application infrastructure.
+
+OCI Data Science provides the managed JupyterLab workspace, selectable Compute, persistent storage, and simple start/stop lifecycle for the experiment. The scope is deliberately limited to a demonstrator. As stated above, it is not a validated scientific protocol, clinical tool, hearing assessment, or production application.
 
 ![Overview of the Gradio Administrator interface](../assets/gradio-what-you-will-build.png)
 
 *Figure 1 — What you will build: the Gradio Administrator interface brings together recording or upload, word-level settings, frequency plots, audio generation, and handoff to the end-user workflow in one responsive page.*
 
-> **Publication note:** the companion repository is currently private. Make it public, or replace the repository link with an appropriate public link, before publishing this article on Medium.
-
 ## What you will build
 
 - Microphone recording or audio-file upload.
 - French transcription with Whisper word timestamps.
+
+> **Language note —** This MVP is configured for French transcription. To use English, change `language="fr"` to `language="en"` in `transcribe_file`. To let Whisper detect the spoken language automatically, remove the `language` parameter.
+
 - An editable word-level table for target frequency, bandwidth, and timing.
 - Pitch shifting and Butterworth band-pass filtering for each word.
 - Concatenated output audio, frequency plots, and an end-user transcription check.
@@ -24,15 +29,16 @@ Companion code: `notebooks/word-level-audio-perception-gradio-oci.ipynb` in the 
 
 ## Prerequisites
 
-You need an OCI account, permissions to create Data Science resources, a Notebook Session with outbound internet access, and the tutorial notebook. A CPU shape can run the MVP; a GPU shape may reduce transcription time. Run the notebook only with audio that you are permitted to process.
+You need an OCI account, permissions to create Data Science resources, a Notebook Session with outbound internet access, and the tutorial notebook. A small CPU shape can run the MVP. Run the notebook only with audio that you are permitted to process.
 
 ## Step 1 — Create the OCI workspace
 
 1. In the OCI Console, open **Analytics & AI** → **Data Science** → **Projects**.
 2. Create or select a project.
-3. Create a Notebook Session with an appropriate VM shape, Block Storage, and outbound-capable network configuration.
+3. Create a Notebook Session with an appropriate VM shape, Block Storage, and outbound-capable network configuration. The Block Storage already attached to the Notebook Session is sufficient for this tutorial.
 4. Activate the session and open JupyterLab.
-5. Keep notebooks and retained files on the attached Block Volume under `/home/datascience`.
+
+The attached Block Storage preserves the notebook and working files after a session is deactivated and later reactivated. In a standard Notebook Session, it is mounted at `/home/datascience` and is available from the JupyterLab file tree.
 
 ## Step 2 — Upload and prepare the notebook
 
@@ -75,7 +81,7 @@ The editable table contains the transcribed word, default target frequency of `1
 
 ## Step 5 — Adjust and validate word-level settings
 
-Edit the target frequency, filter bandwidth, or timestamps when appropriate, then select **Validate table changes**. These values are experimental controls; the default target frequency is not an automatic per-word frequency measurement.
+Edit the target frequency, filter bandwidth, or timestamps when appropriate, then select **Validate table changes**. These settings are experimental controls. The default target frequency is only a starting value for exploration; it is not an automatically measured acoustic property of the word.
 
 ![Desktop view of the Gradio administrator interface](../assets/gradio-desktop-audio-frequency.png)
 
@@ -126,7 +132,13 @@ This produces a convenient temporary Gradio demonstration link. Do not use it wi
 
 ## From MVP to an OCI architecture
 
-For an operational design, separate the user interface, audio storage, repeatable processing, and model-serving responsibilities. OCI Data Science Jobs can run repeatable tasks outside the notebook; Object Storage can retain inputs and outputs under controlled policies; and OCI Data Science Model Deployments provide managed HTTP endpoints for suitable model-serving workloads. These capabilities do not, by themselves, make a Gradio sharing URL a production deployment.
+Gradio is particularly effective at the MVP stage: it turns Python functions into an interactive web interface with minimal frontend code. In this tutorial, it provides the administrator and end-user views, audio controls, editable parameters, charts, and feedback form in a single application. This dramatically shortens the path from an audio-processing idea to a testable web experience.
+
+OCI Data Science provides the managed environment in which that Gradio application, the notebook, Python dependencies, and audio-processing workflow can be developed and tested together. A Notebook Session can be activated when experimentation is needed and deactivated afterwards, while notebooks and working files remain available on attached Block Storage.
+
+For an operational architecture, separate the web interface, audio storage, repeatable processing, and model-serving responsibilities. OCI Data Science Jobs can run repeatable tasks outside the notebook; Object Storage can retain inputs and outputs under controlled policies; and OCI Data Science Model Deployments can expose managed HTTP endpoints for suitable model-serving workloads.
+
+The temporary Gradio sharing URL is designed for rapid demonstration and feedback. Gradio itself can also be deployed as part of a production architecture, taking into account that production use requires an appropriate hosting, identity, security, monitoring, scalability, and data-governance design.
 
 ## Further resources
 
