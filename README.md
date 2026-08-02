@@ -18,8 +18,9 @@ The Medium-ready article source is available in [`articles/medium-article.md`](a
 
 ## Contents
 
-- `notebooks/word-level-audio-perception-gradio-oci.ipynb` — tutorial notebook (to be added from the source file)
-- `data/` — optional local test audio; not committed by default
+- `notebooks/word-level-audio-perception-gradio-oci.ipynb` — complete tutorial notebook
+- `articles/medium-article.md` — source version of the companion Medium tutorial
+- `assets/` — screenshots used by the tutorial
 
 ## Run in OCI Data Science
 

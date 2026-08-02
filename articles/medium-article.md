@@ -147,7 +147,7 @@ The temporary Gradio sharing URL is designed for rapid demonstration and feedbac
 - [OCI Data Science Jobs](https://docs.oracle.com/en-us/iaas/Content/GSG/Reference/getting-started-as-data-scientist.htm)
 - [OCI Data Science Model Deployments](https://docs.oracle.com/en-us/iaas/Content/data-science/using/ai-quick-actions-model-deploy.htm)
 - [Gradio Quickstart guides](https://gradio.app/guides/quickstart)
-- [Companion repository disclaimer](../DISCLAIMER.md)
+- [Companion repository disclaimer](https://github.com/Alexis-BL/oci-data-science-gradio-audio-mvp/blob/main/DISCLAIMER.md)
 
 **License scope —** The MIT License in the companion repository applies only to the code and original documentation distributed in that repository. OCI Data Science and other third-party services, software, documentation, and trademarks remain subject to their respective terms and licenses.
 
