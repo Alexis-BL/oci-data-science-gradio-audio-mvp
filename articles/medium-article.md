@@ -153,6 +153,8 @@ The temporary Gradio sharing URL is designed for rapid demonstration and feedbac
 
 **License scope —** The MIT License in the companion repository applies only to the code and original documentation distributed in that repository. OCI Data Science and other third-party services, software, documentation, and trademarks remain subject to their respective terms and licenses.
 
+**AI assistance —** AI tools were used to support the preparation and review of this material. All final content was reviewed and edited by the author.
+
 ## Disclaimer
 
 This article and its companion repository are a personal technical reference implementation and starter MVP, provided for education, experimentation, and evaluation only. They are not a production-ready product, managed service, security or compliance solution, legal, medical, scientific, financial, or professional advice, or a commitment to provide any service. This MVP is not a validated scientific protocol, clinical tool, hearing assessment, speech-recognition guarantee, or safety-critical system. Its audio transformation and text-verification results may be incomplete, inaccurate, version-dependent, or unsuitable for a particular use; independent validation and human review are required before consequential use.
