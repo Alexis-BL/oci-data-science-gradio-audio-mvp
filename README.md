@@ -40,6 +40,8 @@ FFmpeg is a system executable rather than a Python package and is consequently n
 
 This is an editable research MVP, not a production deployment architecture.
 
+**AI assistance —** AI tools were used to support the preparation and review of this material. All final content was reviewed and edited by the author.
+
 ## License and disclaimer
 
 This repository is released under the [MIT License](LICENSE). Read the full [Disclaimer](DISCLAIMER.md) before use. It is a personal, unsupported technical reference implementation provided as-is, without warranty, support or liability to the fullest extent permitted by law. The views expressed are personal and do not represent the author's employer or Oracle. Users remain responsible for their audio and transcription data, consent and data-rights obligations, security, costs, third-party terms and compliance obligations.
